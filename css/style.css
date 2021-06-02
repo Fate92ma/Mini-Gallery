@@ -15,19 +15,19 @@ Contact Me: fatema131khaled@gmail.com
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    font-family: system-ui
+    -o-box-sizing: border-box
 }
-
-/* Start Styling */
 
 html {
     scroll-behavior: smooth
 }
 
 body {
+    font-family: system-ui;
     background: linear-gradient(to left, #ccccff 0%, #ffcccc 100%)
 }
+
+/* Start Styling */
 
 main {
     margin: 100px 0
@@ -61,7 +61,7 @@ input {
     flex: 30%;
     max-width: 30%;
     padding: 5px;
-    margin: 10px auto
+    margin: 5px auto
 }
 
 .gallery div img {
@@ -77,34 +77,29 @@ input {
 }
 
 .gallery div ul span {
-    margin-top: 7px;
-    margin-right: 10px;
+    margin-top: 4px;
+    margin-right: 7px;
     cursor: pointer;
     background: white;
     border: 1px solid darkslategray;
-    padding: 2px 10px;
+    padding: 0px 10px;
     border-radius: 20px;
     color: darkslategray
 }
 
 .pagination {
-    background: white;
     margin: 40px auto;
     width: fit-content;
     display: flex;
-    border-top: 1px solid darkslategray;
-    border-bottom: 1px solid darkslategray;
     flex-wrap: wrap
 }
 
 .pagination p {
+    background: white;
+    margin: 3px;
+    text-align: center;
     cursor: pointer;
     padding: 2px 10px;
-    border-left: 1px solid darkslategray
-}
-
-.pagination p:last-of-type {
-    border-right: 1px solid darkslategray
 }
 
 center {
@@ -115,7 +110,7 @@ center {
     margin-top: 40px
 }
 
-.singleImage {
+.displayImage {
     padding: 10px;
     margin: 100px auto;
     display: flex;
@@ -123,32 +118,36 @@ center {
     flex-direction: column
 }
 
-.singleImage img {
+.displayImage img {
     display: block;
     margin: auto;
     border: 1px solid darkslategray
 }
 
-.singleImage div {
+.displayImage div {
     margin-top: 20px;
     display: flex;
     justify-content: center
 }
 
-.singleImage div p {
+.displayImage div p {
     display: flex;
     flex-direction: column
 }
 
-.singleImage div p:nth-of-type(2) {
+.displayImage div p:nth-of-type(2) {
     margin: 0 40px
 }
 
-.singleImage div p span {
+.displayImage div p span {
     color: darkslategray
 }
 
-@media (max-width: 1100px) {
+/* End Styling */
+
+/* Start Media Query */
+
+@media (max-width: 1200px) {
 
     input {
         width: 60vw
@@ -160,22 +159,22 @@ center {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
     input {
-        width: 70vw
+        width: 75vw
     }
 
     .gallery div {
-        flex: 75%;
-        max-width: 75%
+        flex: 90%;
+        max-width: 90%
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     input {
-        width: 80vw
+        width: 90vw
     }
 
     .gallery div {
@@ -184,38 +183,4 @@ center {
     }
 }
 
-@media (max-width: 500px) {
-
-    input {
-        width: 90vw
-    }
-
-    .gallery div ul {
-        flex-direction: column
-    }
-
-    .gallery div ul span {
-        width: fit-content;
-        margin: auto;
-        margin-bottom: 10px
-    }
-
-    .singleImage div {
-        flex-direction: column
-    }
-
-    .singleImage div p {
-        justify-content: center;
-        flex-direction: row
-    }
-
-    .singleImage div p:nth-of-type(2) {
-        margin: 20px 0
-    }
-
-    .singleImage div p span {
-        margin-left: 10px
-    }
-}
-
-/* End Styling */
+/* End Media Query */

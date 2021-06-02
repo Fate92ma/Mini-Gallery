@@ -1,4 +1,5 @@
 // Dom Variables
+
 let input = document.getElementsByClassName("input")[0],
 
     inputValue,
@@ -8,6 +9,7 @@ let input = document.getElementsByClassName("input")[0],
     pagination = document.getElementsByClassName("pagination")[0],
 
     // Data Variables
+
     myRequest,
 
     myData,
@@ -17,8 +19,6 @@ let input = document.getElementsByClassName("input")[0],
 // Events
 
 input.addEventListener("keypress", mainFn)
-
-/**************************************************************************************************/
 
 //
 function mainFn(event) {
@@ -43,8 +43,6 @@ function mainFn(event) {
     }
 
 }
-
-/**************************************************************************************************/
 
 // function to get data from url based ou user input
 function getData() {
@@ -89,8 +87,6 @@ function getData() {
 
 }
 
-/**************************************************************************************************/
-
 // function to display data in dom
 function showImages(array, whereToShow) {
 
@@ -113,8 +109,6 @@ function showImages(array, whereToShow) {
 
 }
 
-/**************************************************************************************************/
-
 // function to get id of an image clicked by user to view in a new page
 function getImageID(id) {
 
@@ -122,11 +116,9 @@ function getImageID(id) {
 
     localStorage.setItem('theImage', JSON.stringify(theImage))
 
-    window.open('singleImage.html', '_blank')
+    window.open('displayImage.html', '_blank')
 
 }
-
-/**************************************************************************************************/
 
 // function to get every tag
 function getAllTags() {
@@ -157,8 +149,6 @@ function getAllTags() {
 
 }
 
-/**************************************************************************************************/
-
 // function to get links of pages related to url
 function toGetPagesNum(count, whereToDisplay, whatToHref) {
 
@@ -174,8 +164,6 @@ function toGetPagesNum(count, whereToDisplay, whatToHref) {
     }
 
 }
-
-/**************************************************************************************************/
 
 // function to allow clicking on any link of pages
 function newPageFn() {
@@ -206,5 +194,3 @@ function newPageFn() {
     })
 
 }
-
-/**************************************************************************************************/
